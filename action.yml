@@ -1,0 +1,8 @@
+name: 'Install CloudTruth CLI'
+description: 'Install the CloudTruth CLI'
+branding:
+  icon: 'loader'
+  color: 'green'
+runs:
+  using: 'node12'
+  main: 'index.js'
