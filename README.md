@@ -6,6 +6,5 @@ Include this Action as a step in your workflow:
 ```
 steps:
     - name: Checkout
-      uses: cloudtr
-      cloudtruth/cli-action@v1.0.2
+      uses: cloudtruth/cli-action@v1.0.2
 ```
