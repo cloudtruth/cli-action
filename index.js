@@ -4,6 +4,7 @@ const io = require('@actions/io');
 
 const workspace = process.env.GITHUB_WORKSPACE;
 const installDir = `${workspace}/bin`;
+const CT_CLI_VERSION = `0.1.2`;
 
 try {
   version();
@@ -15,33 +16,33 @@ async function version() {
   switch (process.platform) {
     case "win32": {
       const installDir = `${workspace}\\bin`;
-      const url = 'https://github.com/cloudtruth/cloudtruth-cli/releases/download/0.1.1/cloudtruth-0.1.1-x86_64-pc-windows-msvc.zip';
+      const url = `https://github.com/cloudtruth/cloudtruth-cli/releases/download/${CT_CLI_VERSION}/cloudtruth-${CT_CLI_VERSION}-x86_64-pc-windows-msvc.zip`;
 
       await io.mkdirP(installDir);
       const downloadPath = await tc.downloadTool(url);
       await tc.extractZip(downloadPath, installDir);
-      const ctPath = `${installDir}\\cloudtruth-0.1.1-x86_64-pc-windows-msvc`;
+      const ctPath = `${installDir}\\cloudtruth-${CT_CLI_VERSION}-x86_64-pc-windows-msvc`;
       core.addPath(ctPath);  
       break;
     }
     case "linux": {
-      const url =  "https://github.com/cloudtruth/cloudtruth-cli/releases/download/0.1.2/cloudtruth-0.1.2-x86_64-unknown-linux-musl.tar.gz"
+      const url =  `https://github.com/cloudtruth/cloudtruth-cli/releases/download/${CT_CLI_VERSION}/cloudtruth-${CT_CLI_VERSION}-x86_64-unknown-linux-musl.tar.gz`
 
       await io.mkdirP(installDir);
       const downloadPath = await tc.downloadTool(url);   
       core.setOutput("downloadPath", downloadPath)      
       await tc.extractTar(downloadPath, installDir);
-      const ctPath = `${installDir}/cloudtruth-0.1.2-x86_64-unknown-linux-musl`;
+      const ctPath = `${installDir}/cloudtruth-${CT_CLI_VERSION}-x86_64-unknown-linux-musl`;
       core.addPath(ctPath);  
       break;
     }
     case "darwin": {
-      const url = "https://github.com/cloudtruth/cloudtruth-cli/releases/download/0.1.1/cloudtruth-0.1.1-x86_64-apple-darwin.tar.gz";      
+      const url = `https://github.com/cloudtruth/cloudtruth-cli/releases/download/${CT_CLI_VERSION}/cloudtruth-${CT_CLI_VERSION}-x86_64-apple-darwin.tar.gz`;      
 
       await io.mkdirP(installDir);
       const downloadPath = await tc.downloadTool(url);    
       await tc.extractTar(downloadPath, installDir);
-      const ctPath = `${installDir}/cloudtruth-0.1.1-x86_64-apple-darwin`;
+      const ctPath = `${installDir}/cloudtruth-${CT_CLI_VERSION}-x86_64-apple-darwin`;
       core.addPath(ctPath);  
       break;
     }
