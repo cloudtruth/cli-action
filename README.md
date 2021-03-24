@@ -5,5 +5,5 @@
 Include this Action as a step in your GitHub Action workflow:
 ```
 steps:
-    - uses: cloudtruth/cli-action@v1
+    - uses: cloudtruth/cli-action@v0.1.2
 ```
