@@ -1,7 +1,7 @@
 name: 'Install CloudTruth CLI'
 description: 'Install the CloudTruth CLI'
 branding:
-  icon: 'loader'
+  icon: 'terminal'
   color: 'green'
 runs:
   using: 'node12'
