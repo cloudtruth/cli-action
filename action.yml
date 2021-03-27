@@ -1,5 +1,9 @@
 name: 'Install CloudTruth CLI'
 description: 'Install the CloudTruth CLI'
+inputs:
+  version:
+    required: false
+    default: '0.1.3'
 branding:
   icon: 'terminal'
   color: 'green'
