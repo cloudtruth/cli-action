@@ -13,5 +13,5 @@ Use ``with: version:`` to install a specific version:
 steps:
     - uses: cloudtruth/cli-action@v1
       with:
-        version: 0.4.0
+        version: 0.4.1
 ```
