@@ -3,8 +3,10 @@
 
 # Example usage
 Set the [CloudTruth API Key](https://docs.cloudtruth.com/organization-management/access-tokens) as a secret in your [GitHub repository](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) and call it in the action. 
+```
 env:
   CLOUDTRUTH_API_KEY: ${{ secrets.CLOUDTRUTH_API_KEY }}
+```
 
 Include this Action as a step in your GitHub Action workflow:
 ```
