@@ -3,7 +3,7 @@ description: 'Install the CloudTruth CLI'
 inputs:
   version:
     required: false
-    default: '0.5.4'
+    default: '1.0.0'
 branding:
   icon: 'terminal'
   color: 'green'

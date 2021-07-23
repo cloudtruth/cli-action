@@ -5,13 +5,13 @@
 Include this Action as a step in your GitHub Action workflow:
 ```
 steps:
-    - uses: cloudtruth/cli-action@v1
+    - uses: cloudtruth/cli-action@v2
 ```
 
 Use ``with: version:`` to install a specific version:
 ```
 steps:
-    - uses: cloudtruth/cli-action@v1
+    - uses: cloudtruth/cli-action@v2
       with:
-        version: 0.5.4
+        version: 1.0.0
 ```
